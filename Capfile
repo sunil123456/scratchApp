@@ -8,6 +8,7 @@ require 'capistrano/rvm'
 require 'capistrano/rails/assets' # for asset handling add
 require 'capistrano/rails/migrations' # for running migrations
 require 'capistrano/puma'
+require 'capistrano/memcached'
 
 install_plugin Capistrano::Puma  # Default puma tasks
 install_plugin Capistrano::Puma::Workers  # if you want to control the workers (in cluster mode)
