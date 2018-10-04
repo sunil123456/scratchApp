@@ -9,7 +9,7 @@ class Company < ApplicationRecord
   before_destroy :expire_cache
 
   def expire_cache
-    ActionController::Base.new.expire_fragment('table_of_all_employees')
+     Rails.cache.delete([:company, self.id, :name])
   end
 
   def to_s

@@ -14,10 +14,10 @@
   </thead>
 
   <tbody>
-    <%# cache('table_of_all_employees') do %>
+    <%# cache "table_of_all_employees", expires_in: 5.minutes do %>
     <% @employees.each do |employee| %>
       <tr>
-        <td><%= employee.company %></td>
+        <td><%= employee.company_name %></td>
         <td><%= employee.last_name %></td>
         <td><%= employee.first_name %></td>
         <td><%= employee.phone_number %></td>
