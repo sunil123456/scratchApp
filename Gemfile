@@ -54,8 +54,9 @@ group :development do
   gem 'meta_request'
   gem 'bullet'
   gem 'rack-mini-profiler', require: false
-  gem 'faker'
+ 
 end
+gem 'faker'
 gem 'rails_12factor', group: :production
 group :development do
   gem 'capistrano'
